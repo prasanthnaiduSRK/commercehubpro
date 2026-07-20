@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CommerceHub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/home.css">
+    <script src="../js/home.js"></script>
+    <script src="../js/common.js"></script>
+</head>
+
+<body>
+
+<div id="toast"></div>
+
+<!-- ==========================
+        HEADER
+========================== -->
+
+<header>
+
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <h2>CommerceHub</h2>
+            </div>
+            <div class="search-box">
+                <input
+                        type="text"
+                        placeholder="Search Products">
+                <button>Search</button>
+
+            </div>
+            <ul class="nav-links">
+
+                <li><a href="product.html">Products</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="orderhistory.html">Orders</a></li>
+                <li><a href="wishlist.html">❤️</a></li>
+                <li><a href="cart.html">🛒</a></li>
+            </ul>
+
+
+                <div class="profile-menu">
+                    <button id="profileBtn">
+                        Login
+                    </button>
+
+                    <div class="dropdown" id="dropdownMenu">
+                        <a href="profile.html">👤 My Profile</a>
+                        <a href="orderhistory.html">📦 My Orders</a>
+                        <a href="wishlist.html">❤️ Wishlist</a>
+                        <a href="cart.html">🛒 Cart</a>
+                        <hr>
+
+                        <a href="#" onclick="logout()">🚪 Logout</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<!-- ==========================
+        HERO
+========================== -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="hero-text">
+
+                <span class="tag">🔥 New Collection 2026</span>
+
+                <h1>
+                    Discover Amazing Products <br>
+                    At Best Prices
+                </h1>
+
+                <p>
+                    Shop electronics, fashion, groceries and more.
+                    Fast delivery, secure payments and exciting offers.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="product.html" class="shop-btn">Shop Now</a>
+                    <a href="#categories" class="explore-btn">Explore</a>
+
+                </div>
+
+            </div>
+            <div class="hero-image">
+                <img src="" id="heroImage" alt="Hero Image">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================
+        CATEGORIES
+========================== -->
+
+<section id="categories" class="categories">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Shop by Category</h2>
+
+            <p>Find your favorite products instantly</p>
+
+        </div>
+
+        <div class="category-grid">
+
+            <div class="category-card" onclick="openCategory('Mobiles')">
+
+                <div class="icon">📱</div>
+
+                <h3>Mobiles</h3>
+
+            </div>
+
+            <div class="category-card" onclick="openCategory('Electronics')">
+
+                <div class="icon">💻</div>
+
+                <h3>Electronics Devices</h3>
+
+            </div>
+
+            <div class="category-card" onclick="openCategory('Fashion')">
+
+                <div class="icon">👕</div>
+
+                <h3>Fashion</h3>
+
+            </div>
+
+            <div class="category-card" onclick="openCategory('Shoes')">
+
+                <div class="icon">👟</div>
+
+                <h3>Shoes</h3>
+
+            </div>
+
+            <div class="category-card" onclick="openCategory('Watches')">
+
+                <div class="icon">⌚</div>
+
+                <h3>Watches</h3>
+
+            </div>
+
+            <div class="category-card" onclick="openCategory('Furniture')">
+
+                <div class="icon">🛋️</div>
+
+                <h3>Furniture</h3>
+
+            </div>
+
+            <div class="category-card" onclick="openCategory('Beauty')">
+
+                <div class="icon">💄</div>
+
+                <h3>Beauty</h3>
+
+            </div>
+
+            <div class="category-card" onclick="openCategory('Groceries')">
+
+                <div class="icon">🛒</div>
+
+                <h3>Groceries</h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==========================
+        FEATURED PRODUCTS
+========================== -->
+
+<section class="featured-products">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Featured Products</h2>
+
+            <p>Trending products handpicked for you</p>
+        </div>
+        <div class="product-grid">
+
+            <div class="product-card">
+                <span class="discount">20% OFF</span>
+                <div class="product-image">
+                    <img src="../images/iphone18.jpg" alt="Apple iPhone">
+                </div>
+                <div class="product-info">
+                    <span class="category">Electronics</span>
+                    <h3>Apple iPhone</h3>
+                    <p>Powerful smartphone with premium features.</p>
+                    <div class="price">
+                        <span class="new-price">₹79,999</span>
+                        <span class="old-price">₹89,999</span>
+                    </div>
+                    <button>Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="discount">15% OFF</span>
+                <div class="product-image">
+                    <img src="../images/pshoes.jpg" alt="Premium Shoes">
+                </div>
+                <div class="product-info">
+                    <span class="category">Fashion</span>
+                    <h3>Premium Shoes</h3>
+                    <p>Comfortable and stylish running shoes.</p>
+                    <div class="price">
+                        <span class="new-price">₹3,999</span>
+                        <span class="old-price">₹4,999</span>
+                    </div>
+                    <button>Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="discount">30% OFF</span>
+                <div class="product-image">
+                    <img src="../images/offcechair.jpg" alt="Office Chair">
+                </div>
+                <div class="product-info">
+                    <span class="category">Furniture</span>
+                    <h3>Office Chair</h3>
+                    <p>Ergonomic chair for better comfort.</p>
+                    <div class="price">
+                        <span class="new-price">₹5,499</span>
+                        <span class="old-price">₹7,999</span>
+                    </div>
+                    <button>Add To Cart</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="discount">10% OFF</span>
+                <div class="product-image">
+                    <img src="../images/smartwatch.jpg" alt="Smart Watch">
+                </div>
+                <div class="product-info">
+                    <span class="category">Accessories</span>
+                    <h3>Smart Watch</h3>
+                    <p>Track your fitness every day.</p>
+                    <div class="price">
+                        <span class="new-price">₹8,999</span>
+                        <span class="old-price">₹9,999</span>
+                    </div>
+                    <button>Add To Cart</button>
+                </div>
+            </div>
+
+        </div>
+
+<!-- ==========================
+        FLASH SALE
+========================== -->
+
+<section class="flash-sale">
+
+    <div class="container">
+
+        <div class="flash-content">
+
+            <div class="flash-text">
+
+                <span class="flash-tag">⚡ Limited Time Offer</span>
+
+                <h2>Flash Sale</h2>
+
+                <p>
+
+                    Grab your favorite products before the offer ends.
+                    Save up to 50% on selected products.
+
+                </p>
+
+                <a href="product.html" class="flash-btn">
+
+                    Shop Deals
+
+                </a>
+
+            </div>
+
+            <div class="countdown">
+
+                <div class="time-box">
+
+                    <h3 id="days">00</h3>
+
+                    <span>Days</span>
+
+                </div>
+
+                <div class="time-box">
+
+                    <h3 id="hours">00</h3>
+
+                    <span>Hours</span>
+
+                </div>
+
+                <div class="time-box">
+
+                    <h3 id="minutes">00</h3>
+
+                    <span>Minutes</span>
+
+                </div>
+
+                <div class="time-box">
+
+                    <h3 id="seconds">00</h3>
+
+                    <span>Seconds</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        NEW ARRIVALS
+========================== -->
+
+<section class="new-arrivals">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>New Arrivals</h2>
+
+            <p>Latest products added to our store</p>
+
+        </div>
+
+        <div class="arrival-grid">
+
+            <div class="arrival-card">
+
+                <div class="arrival-image">
+
+                    <img src="../images/earbuds.jpg" alt="Product">
+
+                </div>
+
+                <div class="arrival-info">
+
+                    <span>Electronics</span>
+
+                    <h3>Wireless Earbuds</h3>
+
+                    <h4>₹2,999</h4>
+
+                </div>
+
+            </div>
+
+            <div class="arrival-card">
+
+                <div class="arrival-image">
+
+                    <img src="../images/jacket.jpg" alt="Product">
+
+                </div>
+
+                <div class="arrival-info">
+
+                    <span>Fashion</span>
+
+                    <h3>Leather Jacket</h3>
+
+                    <h4>₹4,999</h4>
+
+                </div>
+
+            </div>
+
+            <div class="arrival-card">
+
+                <div class="arrival-image">
+
+                    <img src="../images/smartwatch.jpg" alt="Product">
+
+                </div>
+
+                <div class="arrival-info">
+
+                    <span>Accessories</span>
+
+                    <h3>Smart Watch</h3>
+
+                    <h4>₹8,999</h4>
+
+                </div>
+
+            </div>
+
+            <div class="arrival-card">
+                <div class="arrival-image">
+                    <img src="../images/offcechair.jpg" alt="Product">
+
+                </div>
+
+                <div class="arrival-info">
+
+                    <span>Home</span>
+
+                    <h3>Modern Chair</h3>
+
+                    <h4>₹6,499</h4>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        WHY CHOOSE US
+========================== -->
+
+<section class="why-us">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>Why Choose CommerceHub?</h2>
+
+            <p>Your satisfaction is our highest priority.</p>
+
+        </div>
+
+        <div class="why-grid">
+
+            <div class="why-card">
+
+                <div class="why-icon">🚚</div>
+
+                <h3>Free Delivery</h3>
+
+                <p>
+
+                    Fast and free delivery on all eligible orders.
+
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <div class="why-icon">🔒</div>
+
+                <h3>Secure Payment</h3>
+
+                <p>
+
+                    100% secure online payment with trusted gateways.
+
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <div class="why-icon">↩️</div>
+
+                <h3>Easy Returns</h3>
+
+                <p>
+
+                    Hassle-free returns within 7 days.
+
+                </p>
+
+            </div>
+
+            <div class="why-card">
+
+                <div class="why-icon">🎧</div>
+
+                <h3>24/7 Support</h3>
+
+                <p>
+
+                    Friendly customer support anytime you need help.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        NEWSLETTER
+========================== -->
+
+<section class="newsletter">
+
+    <div class="container">
+
+        <div class="newsletter-box">
+
+            <h2>Subscribe to our Newsletter</h2>
+
+            <p>
+                Get exclusive offers, latest arrivals and exciting discounts directly to your inbox.
+            </p>
+
+            <form class="newsletter-form">
+
+                <input
+                        type="email"
+                        placeholder="Enter your email">
+
+                <button>
+                     <a href="register.html">Subscribe ></a>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+        FOOTER
+========================== -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div class="footer-column">
+
+                <h2>CommerceHub</h2>
+
+                <p>
+
+                    Your trusted online shopping destination with quality products,
+                    secure payments and fast delivery.
+
+                </p>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li><a href="#">Home</a></li>
+
+                    <li><a href="product.html">Products</a></li>
+
+                    <li><a href="#categories">Categories</a></li>
+
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Customer</h3>
+
+                <ul>
+
+                    <li><a href="orderhistory.html">Orders</a></li>
+                    <li><a href="wishlist.html">Wishlist</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="#">Support</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Contact</h3>
+
+                <p>Email : support@commercehub.com</p>
+
+                <p>Phone : +91 9876543210</p>
+
+                <p>Vijayawada, India</p>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">
+            © 2026 CommerceHub. All Rights Reserved.
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

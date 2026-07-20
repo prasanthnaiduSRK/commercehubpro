@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="../css/cart.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="container">
+
+        <nav class="navbar">
+
+            <h2>CommerceHub</h2>
+
+            <a href="product.html">
+
+                ← Continue Shopping
+
+            </a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<section class="cart-page">
+
+    <div class="container">
+
+        <h1>My Cart</h1>
+
+        <div class="cart-layout">
+
+            <div
+                    class="cart-items"
+                    id="cartItems">
+
+            </div>
+
+            <div class="cart-summary">
+
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+
+                    <span>Items</span>
+
+                    <span id="itemCount">0</span>
+
+                </div>
+
+                <div class="summary-row">
+
+                    <span>Total</span>
+
+                    <span id="totalPrice">
+
+                        ₹0
+
+                    </span>
+
+                </div>
+
+                <button id="checkoutBtn">
+
+                    <a href = "Adress.html"> Proceed To Checkout </a>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div id="toast"></div>
+
+<script src="../js/cart.js"></script>
+<script src="../js/common.js"></script>
+
+</body>
+
+</html>

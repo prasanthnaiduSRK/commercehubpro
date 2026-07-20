@@ -1,0 +1,294 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
+}
+
+body{
+background:#f8fafc;
+color:#111827;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* ================= NAVBAR ================= */
+
+header{
+background:#fff;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 0;
+}
+
+.logo h2{
+font-size:34px;
+color:#2563eb;
+text-shadow:0 0 10px rgba(37,99,235,.25);
+}
+
+/* ================= ADDRESS ================= */
+
+.address-section{
+padding:70px 0;
+}
+
+.address-card{
+max-width:750px;
+margin:auto;
+background:#fff;
+padding:40px;
+border-radius:20px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+border:1px solid #e5e7eb;
+}
+
+.address-card h1{
+font-size:38px;
+text-align:center;
+color:#111827;
+position:relative;
+margin-bottom:15px;
+}
+
+.address-card h1::after{
+content:"";
+display:block;
+width:180px;
+height:4px;
+margin:15px auto 0;
+background:#2563eb;
+border-radius:10px;
+box-shadow:0 0 18px rgba(37,99,235,.5);
+}
+
+.address-card p{
+text-align:center;
+color:#6b7280;
+margin-bottom:35px;
+}
+
+.input-group{
+display:flex;
+flex-direction:column;
+margin-bottom:20px;
+}
+
+.input-group label{
+font-weight:600;
+margin-bottom:8px;
+color:#374151;
+}
+
+.input-group input{
+padding:14px 18px;
+border:2px solid #e5e7eb;
+border-radius:12px;
+font-size:16px;
+transition:.3s;
+outline:none;
+}
+
+.input-group input:focus{
+border-color:#2563eb;
+box-shadow:0 0 15px rgba(37,99,235,.2);
+}
+
+.row{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+#saveBtn,
+#checkoutBtn{
+width:100%;
+padding:16px;
+border:none;
+border-radius:14px;
+font-size:17px;
+font-weight:700;
+cursor:pointer;
+transition:.35s;
+margin-top:18px;
+position:relative;
+overflow:hidden;
+}
+
+#saveBtn{
+background:#2563eb;
+color:#fff;
+}
+
+#saveBtn:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 25px rgba(37,99,235,.35);
+}
+
+#checkoutBtn{
+background:linear-gradient(135deg,#f59e0b,#facc15);
+color:#111827;
+box-shadow:0 0 20px rgba(245,158,11,.35);
+}
+
+#checkoutBtn::before{
+content:"";
+position:absolute;
+top:0;
+left:-120%;
+width:60%;
+height:100%;
+background:rgba(255,255,255,.55);
+transform:skewX(-25deg);
+animation:shine 2.5s infinite;
+}
+
+#checkoutBtn:hover{
+transform:translateY(-4px);
+box-shadow:0 0 30px rgba(245,158,11,.6);
+}
+
+@keyframes shine{
+
+0%{
+left:-120%;
+}
+
+100%{
+left:170%;
+}
+
+}
+
+@media(max-width:768px){
+
+.row{
+grid-template-columns:1fr;
+}
+
+.address-card{
+padding:25px;
+}
+
+.address-card h1{
+font-size:30px;
+}
+
+}
+
+/* ===========================
+   LOADER
+=========================== */
+
+.loader{
+
+    width:65px;
+
+    height:65px;
+
+    margin:80px auto;
+
+    border:6px solid #e5e7eb;
+
+    border-top:6px solid #2563eb;
+
+    border-radius:50%;
+
+    animation:spin .8s linear infinite;
+
+}
+
+.loading-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:300px;
+
+}
+
+@keyframes spin{
+
+    100%{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+/* ==========================
+        TOAST
+========================== */
+
+#toast{
+
+    position:fixed;
+
+    top:30px;
+
+    right:30px;
+
+    background:#22c55e;
+
+    color:#fff;
+
+    padding:16px 28px;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    opacity:0;
+
+    transform:translateX(120px);
+
+    transition:.4s;
+
+    z-index:99999;
+
+}
+
+#toast.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+#toast.error{
+
+    background:#ef4444;
+
+}
+
+#toast.warning{
+
+    background:#f59e0b;
+
+}
+
+#toast.info{
+
+    background:#2563eb;
+
+}

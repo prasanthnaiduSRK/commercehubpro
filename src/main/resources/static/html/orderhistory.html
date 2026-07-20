@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Orders | CommerceHub</title>
+
+    <link rel="stylesheet" href="../css/orderhistory.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="container navbar">
+
+        <h2 class="logo">CommerceHub</h2>
+
+        <ul class="nav-links">
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="products.html">Products</a></li>
+
+            <li><a href="wishlist.html">Wishlist</a></li>
+
+            <li><a href="cart.html">Cart</a></li>
+
+        </ul>
+
+    </div>
+
+</header>
+
+<main>
+
+    <section class="orders-section">
+
+        <div class="container">
+
+            <div class="page-header">
+
+                <h1>📦 My Orders</h1>
+
+                <p>Track all your purchases in one place.</p>
+
+            </div>
+
+            <div id="ordersContainer">
+
+                <!-- Orders Loaded By JS -->
+
+                <!-- Order Card -->
+
+                <div class="order-card">
+
+                    <div class="order-top">
+
+                        <div>
+
+                            <h3>Order #ORD123456</h3>
+
+                            <span class="status delivered">
+
+                                ✔ Delivered
+
+                            </span>
+
+                        </div>
+
+                        <div class="order-date">
+
+                            Ordered On<br>
+
+                            <strong>15 Jul 2026</strong>
+
+                        </div>
+
+                    </div>
+
+                    <div class="order-body">
+
+                        <div class="order-image">
+
+                            <img src="" id="productImage" alt="Product">
+
+                        </div>
+
+                        <div class="order-details">
+
+                            <h2 id="productName">
+
+                                Product Name
+
+                            </h2>
+
+                            <p>
+
+                                <strong>Brand :</strong>
+
+                                <span id="brand"></span>
+
+                            </p>
+
+                            <p>
+
+                                <strong>Quantity :</strong>
+
+                                <span id="quantity"></span>
+
+                            </p>
+
+                            <p>
+
+                                <strong>Price :</strong>
+
+                                ₹<span id="price"></span>
+
+                            </p>
+
+                            <p>
+
+                                <strong>Total :</strong>
+
+                                ₹<span id="subtotal"></span>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="delivery-section">
+
+                        <div class="address-card">
+
+                            <h3>
+
+                                📍 Delivery Address
+
+                            </h3>
+
+                            <p id="address">
+
+                                Full Address Here
+
+                            </p>
+
+                        </div>
+
+                        <div class="delivery-card">
+
+                            <h3>
+
+                                🚚 Delivery Details
+
+                            </h3>
+
+                            <p>
+
+                                Expected Delivery :
+
+                                <strong id="deliveryDate">
+
+                                    20 Jul 2026
+
+                                </strong>
+
+                            </p>
+
+                            <p>
+
+                                Payment :
+
+                                <strong>
+
+                                    Cash On Delivery
+
+                                </strong>
+
+                            </p>
+
+                            <p>
+
+                                Status :
+
+                                <span class="status shipped">
+
+                                    Shipped
+
+                                </span>
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="order-actions">
+
+                        <button>
+
+                            ⭐ Rate Product
+
+                        </button>
+
+                        <button>
+
+                            🔄 Buy Again
+
+                        </button>
+
+                        <button>
+
+                            📄 Download Invoice
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <div id="toast"></div>
+
+</main>
+
+<script src="../js/orderhistory.js"></script>
+<script src="../js/common.js"></script>
+
+</body>
+
+</html>

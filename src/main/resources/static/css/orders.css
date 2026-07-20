@@ -1,0 +1,683 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Poppins",sans-serif;
+}
+
+body{
+background:#f8fafc;
+color:#111827;
+}
+
+.container{
+width:90%;
+max-width:1300px;
+margin:auto;
+}
+
+header{
+background:#fff;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+padding:18px 0;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.navbar h2{
+color:#2563eb;
+font-size:34px;
+}
+
+.navbar a{
+text-decoration:none;
+font-weight:600;
+color:#111827;
+}
+
+.checkout-section{
+padding:70px 0;
+}
+
+.checkout-section h1{
+text-align:center;
+font-size:42px;
+margin-bottom:40px;
+position:relative;
+}
+
+.checkout-section h1::after{
+content:"";
+display:block;
+width:180px;
+height:4px;
+margin:15px auto;
+background:#2563eb;
+border-radius:20px;
+box-shadow:0 0 18px rgba(37,99,235,.4);
+}
+
+.checkout-layout{
+display:grid;
+grid-template-columns:2fr 1fr;
+gap:40px;
+}
+
+.order-card{
+display:flex;
+gap:30px;
+background:#fff;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.order-card img{
+width:240px;
+height:240px;
+object-fit:contain;
+transition:.4s;
+}
+
+.order-card img:hover{
+transform:scale(1.08);
+}
+
+.order-info{
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.order-info h2{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.order-info p{
+margin:8px 0;
+color:#6b7280;
+}
+
+.order-info h3{
+font-size:34px;
+color:#22c55e;
+margin:20px 0;
+}
+
+/* =======================
+   ORDER SUMMARY
+======================= */
+
+.summary-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    position:sticky;
+
+    top:100px;
+
+    border:1px solid #ececec;
+
+}
+
+.summary-card h2{
+
+    font-size:30px;
+
+    color:#111827;
+
+    margin-bottom:25px;
+
+    position:relative;
+
+}
+
+.summary-card h2::after{
+
+    content:"";
+
+    width:90px;
+
+    height:4px;
+
+    background:#2563eb;
+
+    border-radius:20px;
+
+    display:block;
+
+    margin-top:10px;
+
+}
+
+.summary-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 0;
+
+    font-size:18px;
+
+    color:#374151;
+
+}
+
+.summary-row span:last-child{
+
+    font-weight:700;
+
+}
+
+.free{
+
+    color:#16a34a;
+
+    font-weight:700;
+
+}
+
+.summary-card hr{
+
+    margin:20px 0;
+
+    border:none;
+
+    border-top:1px solid #e5e7eb;
+
+}
+
+.summary-total{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#111827;
+
+    margin-bottom:25px;
+
+}
+
+.summary-total span:last-child{
+
+    color:#2563eb;
+
+}
+
+/* =======================
+   DELIVERY
+======================= */
+
+.delivery-box{
+
+    background:#eff6ff;
+
+    color:#2563eb;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    margin-bottom:18px;
+
+    font-weight:600;
+
+    border-left:5px solid #2563eb;
+
+}
+
+/* =======================
+   ADDRESS
+======================= */
+
+.address-box{
+
+    background:#f9fafb;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    margin-bottom:20px;
+
+    border:1px solid #e5e7eb;
+
+}
+
+.address-box h4{
+
+    color:#111827;
+
+    margin-bottom:10px;
+
+}
+
+.address-box p{
+
+    line-height:1.8;
+
+    color:#6b7280;
+
+}
+
+/* =======================
+   SECURE PAYMENT
+======================= */
+
+.secure-box{
+
+    background:#ecfdf5;
+
+    color:#15803d;
+
+    padding:16px;
+
+    border-radius:14px;
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+    font-weight:600;
+
+    border:1px solid #bbf7d0;
+
+}
+
+/* =======================
+   PLACE ORDER BUTTON
+======================= */
+
+#placeOrderBtn{
+
+    width:100%;
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(135deg,#f59e0b,#facc15);
+
+    color:#111827;
+
+    font-size:20px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    box-shadow:0 12px 25px rgba(245,158,11,.35);
+
+}
+
+#placeOrderBtn:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 20px 35px rgba(245,158,11,.45);
+
+}
+
+/* =======================
+   PRODUCT CARD
+======================= */
+
+.checkout-card{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:35px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    display:flex;
+
+    gap:40px;
+
+    align-items:center;
+
+}
+
+.checkout-card img{
+
+    width:240px;
+
+    height:240px;
+
+    object-fit:contain;
+
+    transition:.4s;
+
+}
+
+.checkout-card img:hover{
+
+    transform:scale(1.06);
+
+}
+
+.checkout-info h1{
+
+    font-size:44px;
+
+    color:#111827;
+
+    margin-bottom:20px;
+
+}
+
+.checkout-info h2{
+
+    color:#16a34a;
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+}
+
+.checkout-info p{
+
+    font-size:18px;
+
+    color:#4b5563;
+
+    margin-bottom:15px;
+
+}
+
+.total{
+font-size:22px;
+font-weight:700;
+}
+
+#placeOrderBtn{
+width:100%;
+margin-top:25px;
+padding:16px;
+border:none;
+border-radius:14px;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+background:linear-gradient(135deg,#f59e0b,#facc15);
+position:relative;
+overflow:hidden;
+transition:.3s;
+}
+
+#placeOrderBtn::before{
+content:"";
+position:absolute;
+left:-120%;
+top:0;
+width:60%;
+height:100%;
+background:rgba(255,255,255,.6);
+transform:skewX(-25deg);
+animation:shine 2.5s infinite;
+}
+
+#placeOrderBtn:hover{
+transform:translateY(-4px);
+box-shadow:0 0 25px rgba(245,158,11,.5);
+}
+
+@keyframes shine{
+
+0%{
+left:-120%;
+}
+
+100%{
+left:160%;
+}
+
+}
+
+@media(max-width:900px){
+
+.checkout-layout{
+grid-template-columns:1fr;
+}
+
+.order-card{
+flex-direction:column;
+align-items:center;
+text-align:center;
+}
+
+}
+
+.payment-note{
+
+    margin-top:25px;
+
+    padding:18px 22px;
+
+    border-radius:15px;
+
+    background:linear-gradient(135deg,#fff7cc,#ffe082,#fff7cc);
+
+    background-size:300% 300%;
+
+    color:#8a4b00;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    line-height:1.8;
+
+    border:2px solid #ffb300;
+
+    box-shadow:0 0 15px rgba(255,193,7,.6);
+
+    animation:shine 3s linear infinite,
+               glow 1.5s ease-in-out infinite alternate;
+
+}
+
+.payment-note strong{
+
+    color:#d97706;
+
+    font-weight:700;
+
+}
+
+@keyframes shine{
+
+    0%{
+
+        background-position:0% 50%;
+
+    }
+
+    100%{
+
+        background-position:100% 50%;
+
+    }
+
+}
+
+@keyframes glow{
+
+    from{
+
+        box-shadow:
+        0 0 8px #ffd54f,
+        0 0 15px #ffca28;
+
+    }
+
+    to{
+
+        box-shadow:
+        0 0 20px #ffc107,
+        0 0 35px #ffb300,
+        0 0 50px #ff9800;
+
+    }
+
+}
+
+.cod{
+
+    color:#d32f2f;
+
+    font-weight:700;
+
+    animation:blink 1.2s infinite;
+
+}
+
+@keyframes blink{
+
+    0%,100%{
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        opacity:.5;
+
+    }
+
+}
+
+/* ===========================
+   LOADER
+=========================== */
+
+.loader{
+
+    width:65px;
+
+    height:65px;
+
+    margin:80px auto;
+
+    border:6px solid #e5e7eb;
+
+    border-top:6px solid #2563eb;
+
+    border-radius:50%;
+
+    animation:spin .8s linear infinite;
+
+}
+
+.loading-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:300px;
+
+}
+
+@keyframes spin{
+
+    100%{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ==========================
+        TOAST
+========================== */
+
+#toast{
+
+    position:fixed;
+
+    top:30px;
+
+    right:30px;
+
+    background:#22c55e;
+
+    color:#fff;
+
+    padding:16px 28px;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    opacity:0;
+
+    transform:translateX(120px);
+
+    transition:.4s;
+
+    z-index:99999;
+
+}
+
+#toast.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+#toast.error{
+
+    background:#ef4444;
+
+}
+
+#toast.warning{
+
+    background:#f59e0b;
+
+}
+
+#toast.info{
+
+    background:#2563eb;
+
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shipping Address | CommerceHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/Adress.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="container">
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <h2>CommerceHub</h2>
+
+            </div>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<section class="address-section">
+
+    <div class="container">
+
+        <div class="address-card">
+
+            <h1>📍 Shipping Address</h1>
+
+            <p>Please enter your delivery address.</p>
+
+            <form id="addressForm">
+
+                <div class="input-group">
+
+                    <label>Full Name</label>
+
+                    <input type="text" id="name" required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Mobile Number</label>
+
+                    <input type="tel" id="phone" required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Address Line 1</label>
+
+                    <input type="text" id="address1" required>
+
+                </div>
+
+                <div class="input-group">
+
+                    <label>Address Line 2</label>
+
+                    <input type="text" id="address2">
+
+                </div>
+
+                <div class="row">
+
+                    <div class="input-group">
+
+                        <label>City</label>
+
+                        <input type="text" id="city" required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>State</label>
+
+                        <input type="text" id="state" required>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="input-group">
+
+                        <label>Pincode</label>
+
+                        <input type="text" id="pincode" required>
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Country</label>
+
+                        <input type="text" id="country" value="India" required>
+
+                    </div>
+
+                </div>
+
+                <button type="submit" id="saveBtn">
+
+                    💾 Save Address
+
+                </button>
+
+                <button type="button" id="checkoutBtn">
+
+                    <a href = "orders.html">⚡ Proceed To Checkout </a>
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div id="toast"></div>
+
+<script src="../js/Adress.js"></script>
+<script src="../js/common.js"></script>
+
+</body>
+
+</html>

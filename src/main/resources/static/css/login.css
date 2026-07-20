@@ -1,0 +1,378 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#f5f7fb;
+
+}
+
+.login-container{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:30px;
+
+}
+
+.login-card{
+
+    width:420px;
+
+    background:rgba(255,255,255,.65);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.5);
+
+    border-radius:20px;
+
+    padding:45px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.login-card h1{
+
+    text-align:center;
+
+    color:#2563eb;
+
+    margin-bottom:10px;
+
+    font-size:34px;
+
+}
+
+.login-card p{
+
+    text-align:center;
+
+    color:#6b7280;
+
+    margin-bottom:30px;
+
+}
+
+.login-card form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.login-card input{
+
+    width:100%;
+
+    height:55px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:12px;
+
+    outline:none;
+
+    padding:0 18px;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.login-card input:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+.login-card button{
+
+    width:100%;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.login-card button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+.register{
+
+    margin-top:25px;
+
+    font-size:15px;
+
+}
+
+.register a{
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.register a:hover{
+
+    text-decoration:underline;
+
+}
+
+@media(max-width:480px){
+
+    .login-card{
+
+        width:100%;
+
+        padding:30px 25px;
+
+    }
+
+    .login-card h1{
+
+        font-size:28px;
+
+    }
+
+}
+
+.guest-login{
+
+    margin-top:25px;
+
+    text-align:center;
+
+}
+
+.guest-login p{
+
+    color:#777;
+
+    margin-bottom:15px;
+
+    position:relative;
+
+}
+
+.guest-login p::before,
+.guest-login p::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+
+    width:35%;
+
+    height:1px;
+
+    background:#ddd;
+
+}
+
+.guest-login p::before{
+
+    left:0;
+
+}
+
+.guest-login p::after{
+
+    right:0;
+
+}
+
+#guestBtn{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    color:#2563eb;
+
+    background:#eef5ff;
+
+    border:2px solid #2563eb;
+
+    transition:.3s;
+
+}
+
+#guestBtn:hover{
+
+    background:#2563eb;
+
+    color:#fff;
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(37,99,235,.3);
+
+}
+/* ===========================
+   LOADER
+=========================== */
+
+.loader{
+
+    width:65px;
+
+    height:65px;
+
+    margin:80px auto;
+
+    border:6px solid #e5e7eb;
+
+    border-top:6px solid #2563eb;
+
+    border-radius:50%;
+
+    animation:spin .8s linear infinite;
+
+}
+
+.loading-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:300px;
+
+}
+
+@keyframes spin{
+
+    100%{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+/* ==========================
+        TOAST
+========================== */
+
+#toast{
+
+    position:fixed;
+
+    top:30px;
+
+    right:30px;
+
+    background:#22c55e;
+
+    color:#fff;
+
+    padding:16px 28px;
+
+    border-radius:12px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+    opacity:0;
+
+    transform:translateX(120px);
+
+    transition:.4s;
+
+    z-index:99999;
+
+}
+
+#toast.show{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+#toast.error{
+
+    background:#ef4444;
+
+}
+
+#toast.warning{
+
+    background:#f59e0b;
+
+}
+
+#toast.info{
+
+    background:#2563eb;
+
+}

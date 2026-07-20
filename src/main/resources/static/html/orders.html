@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | CommerceHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/orders.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="container">
+
+        <nav class="navbar">
+
+            <h2>CommerceHub</h2>
+
+            <a href="index.html">🏠 Home</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<section class="checkout-section">
+
+    <div class="container">
+
+        <h1>Checkout</h1>
+
+        <div class="checkout-layout">
+
+            <div class="order-card">
+
+                <img id="productImage">
+
+                <div class="order-info">
+
+                    <h2 id="productName"></h2>
+
+                    <p id="description"></p>
+
+                    <h3 id="price"></h3>
+
+                    <p><strong>Brand :</strong> <span id="brand"></span></p>
+
+                    <p><strong>Quantity :</strong> <span id="quantity">1</span></p>
+
+                </div>
+
+            </div>
+
+            <div class="summary-card">
+
+                <h2>Order Summary</h2>
+
+                <div class="summary-row">
+                    <span>Items (1)</span>
+                    <span id="itemsPrice"></span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal"></span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span class="free">FREE</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>Platform Fee</span>
+                    <span>₹0</span>
+                </div>
+
+                <div class="summary-row">
+                    <span>GST (18%)</span>
+                    <span id="gst"></span>
+                </div>
+
+                <hr>
+
+                <div class="summary-total">
+                    <span>Total Amount</span>
+                    <span id="grandTotal"></span>
+                </div>
+
+                <p class="payment-note">
+
+                    💳 Currently we support <span class="cod">Cash on Delivery (COD)</span>.
+                    Secure Online Payments (UPI, Cards & Net Banking) will be available in a future update.
+
+                </p>
+
+                <div class="delivery-box">
+
+                    🚚 Delivery in <strong>2-4 Days</strong>
+
+                </div>
+
+                <div class="address-box">
+
+                    <h4>📍 Shipping Address</h4>
+
+                    <p id="address"></p>
+
+                </div>
+
+                <div class="secure-box">
+
+                    🔒 Secure Checkout<br>
+
+                    256-bit SSL Encrypted
+
+                </div>
+
+                <button id="placeOrderBtn">
+
+                    ⚡ Place Order
+
+                </button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="toast"></div>
+
+</section>
+
+<script src="../js/orders.js"></script>
+<script src="../js/common.js"></script>
+
+</body>
+
+</html>

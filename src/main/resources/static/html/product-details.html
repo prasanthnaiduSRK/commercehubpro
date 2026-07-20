@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details | CommerceHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../css/product-details.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="container">
+
+        <nav class="navbar">
+
+            <div class="logo">
+
+                <h2>CommerceHub</h2>
+
+            </div>
+
+            <ul class="nav-links">
+
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="product.html">Products</a></li>
+
+                <li><a href="wishlist.html">❤️ Wishlist</a></li>
+
+                <li><a href="cart.html">🛒 Cart</a></li>
+
+            </ul>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<main>
+
+    <section class="product-details-section">
+
+        <div class="container">
+
+            <div class="product-details-card">
+
+                <div class="product-image">
+
+                    <img id="productImage" src="" alt="Product Image">
+
+                </div>
+
+                <div class="product-info">
+
+                    <span class="category" id="category"></span>
+
+                    <h1 id="productName"></h1>
+
+                    <p id="description"></p>
+
+                    <h2 id="price"></h2>
+
+                    <p><strong>Brand :</strong> <span id="brand"></span></p>
+
+                    <p><strong>Stock :</strong> <span id="stock"></span></p>
+
+                    <p id="availability"></p>
+
+                    <div class="action-buttons">
+
+                        <button id="cartBtn">
+
+                            🛒 Add To Cart
+
+                        </button>
+
+                        <button id="buyNowBtn">
+
+                             ⚡ Buy Now
+
+                        </button>
+
+                        <button id="wishlistBtn">
+
+                            ❤️ Wishlist
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="related-products">
+
+        <div class="container">
+
+            <h2>Related Products</h2>
+
+            <p class="subtitle">
+
+                You may also like these products
+
+            </p>
+
+            <div class="related-grid" id="relatedProducts">
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+<div id="toast"></div>
+<script src="../js/product-details.js"></script>
+<script src="../js/common.js"></script>
+
+</body>
+
+</html>
